@@ -7,11 +7,21 @@ import java.util.List;
 public class Contract {
     private Integer number;
     private LocalDate date;
+    private Double totalValue;
     private List<Installment> list = new ArrayList<>();
 
-    public Contract(Integer number, LocalDate date) {
+    public Contract(Integer number, LocalDate date, Double totalValue) {
         this.number = number;
         this.date = date;
+        this.totalValue = totalValue;
+    }
+
+    public Double getTotalValue() {
+        return totalValue;
+    }
+
+    public void setTotalValue(Double totalVaalue) {
+        this.totalValue = totalValue;
     }
 
     public Integer getNumber() {

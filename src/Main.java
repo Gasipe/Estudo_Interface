@@ -1,3 +1,5 @@
+import entities.Contract;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -13,9 +15,13 @@ public class Main {
         System.out.print("Número: ");
         int number = sc.nextInt();
         System.out.print("Data (dd/MM/yyyy): ");
-        LocalDate date = LocalDate.parse(sc.next());
+        LocalDate date = LocalDate.parse(sc.next(), dtf);
         System.out.print("Valor do contrato: ");
-        double value = sc.nextDouble();
+        double totalValue = sc.nextDouble();
+
+        Contract contract = new Contract(number, date, totalValue);
+
+
         System.out.print("Número de parcelas: ");
         int months = sc.nextInt();
 
