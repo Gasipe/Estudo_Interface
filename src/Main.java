@@ -1,4 +1,6 @@
 import entities.Contract;
+import entities.Installment;
+import services.ContractService;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -23,11 +25,17 @@ public class Main {
 
 
         System.out.print("Número de parcelas: ");
-        int months = sc.nextInt();
+        int n = sc.nextInt();
 
+        ContractService contractService = new ContractService(null);
 
-        System.out.print("PARCELAS:");
+        contractService.processContract(contract,n);
 
+        System.out.println("PARCELAS:");
+
+        for(Installment installment: contract.getList()) {
+            System.out.println(installment);
+        }
 
     }
 }

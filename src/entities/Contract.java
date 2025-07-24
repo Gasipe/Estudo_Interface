@@ -39,4 +39,8 @@ public class Contract {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+
+    public List<Installment> getList() {
+        return list;
+    }
 }
