@@ -4,6 +4,11 @@ import entities.Contract;
 
 public class ContractService {
     private OnlinePaymentService onlinePaymentService;
-    public void processContract(Contract contract, Integer months, OnlinePaymentService onlinePaymentService) {
+
+    public ContractService(OnlinePaymentService onlinePaymentService) {
+        this.onlinePaymentService = onlinePaymentService;
+    }
+
+    public void processContract(Contract contract, Integer months) {
     }
 }
